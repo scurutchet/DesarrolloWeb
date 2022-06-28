@@ -1,0 +1,332 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.contenedorGeneral{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "nav"
+                        "main"
+                        "footer";
+               
+}
+
+.navegador{
+    grid-area: nav;
+}
+
+.principal{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.navegador{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 75px;
+    margin-left: 20px;
+}
+
+.navegador ul{
+    list-style: none;
+    margin-right: 20px;  
+    display:flex; 
+}
+
+.navegador ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.navegador ul li a{
+    color: rgba(249, 194, 76, 0.92);
+    font-size: 20px;
+    padding: 10px;
+}
+
+li a:hover{
+    background-color: rgba(23, 21, 15, 0.92);
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.footer{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    position:absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h5{
+    color: rgba(249, 194, 76, 0.92);
+    font-size: 18px;
+}
+
+/*Página de inicio*/
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align:center;
+    font-size: 40px;
+    line-height: 170px;
+    background-image: url(../img/inicio.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    height: 500px;
+}
+
+/*Página Nosotros*/
+
+.contenedorCajas{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    align-content:center;
+    flex-wrap: wrap;
+}
+
+.caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 440px;
+    min-height: 405px;
+    background-color: rgba(23, 21, 15, 0.92);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;    
+}
+
+.caja p{
+    line-height: 30px;
+    text-align: justify;
+    font-size: 20px;
+    color: rgba(249, 194, 76, 0.92);
+    padding: 5px;
+}
+
+.imgnosotros{
+    width: 380px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+/*Página ubicación*/
+
+.mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+}
+
+.mapa h4{
+    color: rgba(249, 194, 76, 0.92);
+    font-size: 20px;
+    display: none;
+}
+
+/*Página productos*/
+
+.contenedorTarjProductos{
+    display: flex;
+    flex-direction:column;
+    text-align: center; 
+}
+
+.productos{
+    margin: 30px;
+}
+
+.productos h5{
+    color: rgba(249, 194, 76, 0.92);
+    font-size: 20px;
+}
+
+.contenedorProductos h3{
+    color: rgba(249, 194, 76, 0.92);
+    font-size: 30px;
+}
+
+.productos img{
+    width: 500px;
+}
+
+/*Página contacto*/
+
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.form{
+    display: block;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(23, 21, 15, 0.92);
+    border-radius: 5px;
+}
+
+.textoForm{
+    display: block;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(23, 21, 15, 0.92);
+    border-radius: 5px;
+}
+
+.btnForm{
+    display: block;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(120, 98, 34, 0.92);
+    font-weight:bold;
+}
+
+/*Responsive*/
+
+@media(max-width:1000px){
+    .inicio{
+        font-size: 30px;
+    }
+    .caja{
+        width: 350px;
+        margin: 10px;
+    }
+    .imgnosotros{
+        width: 300px;
+    }
+}
+
+@media(max-width:768px){
+    .inicio{
+        font-size: 25px;
+    }
+    .caja{
+        width: 320px;
+        margin: 10px;
+    }
+    .imgnosotros{
+        width: 280px;
+    }
+
+    .navegador{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .logo img{
+        display: none;
+    }
+}
+
+@media(max-width:685px){
+    .inicio{
+        font-size: 18px;
+    }
+    .navegador{
+        height: 60px;
+    }
+        
+    .navegador ul li{
+        line-height: 60px;
+        margin: 0 5px;
+    }
+    
+    .navegador ul li a{
+        font-size: 15px;
+        padding: 10px;
+    }
+          
+    footer h5{
+        font-size: 12px;
+    }
+
+    .productos img{
+        width: 300px;
+    }
+
+    .mapa{
+        display: flex;
+        justify-content:end;
+        align-items:flex-start;
+    }
+    .googleMaps{
+        display:none;
+    } 
+    .mapa h4{
+        display: flex;
+        text-align:center;
+        font-size: 30px;
+        margin: 60px 20px 0px 20px;
+    }
+    .mapa img{
+        width: 100px;
+        margin-top: 100px;       
+    }
+    
+}
+
+@media(max-width:560px){
+   .inicio h2{
+        display: none;
+    }
+   .inicio{
+        display: flex;
+        justify-content:flex-start;
+    }
+   .navegador ul li a{
+        font-size: 12px;
+        padding: 6px;
+    }
+    .form{
+        width: 400px;
+    }
+    
+    .textoForm{
+        width: 400px;
+    }
+    
+    .btnForm{
+        width: 400px;
+    }
+}
