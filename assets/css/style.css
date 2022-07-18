@@ -6,7 +6,6 @@
 }
 
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     min-height: 100vh;
     background-color: black;
@@ -68,10 +67,23 @@ body{
     padding: 10px;
 }
 
-li a:hover{
+li a.active, li a:hover{
     background-color: rgba(23, 21, 15, 0.92);
     border-radius: 3px;
     transition: 0.5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    color: rgba(249, 194, 76, 0.92);
+    display: none;
+}
+
+#check{
+    display: none;
 }
 
 .footer{
@@ -104,7 +116,7 @@ footer h5{
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
-    height: 500px;
+    height: calc(100vh - 80px);
     animation-name: aparecer;
     animation-duration: 2s;
 }
@@ -243,9 +255,9 @@ footer h5{
 
 /*Responsive*/
 
-@media(max-width:1000px){
+@media(max-width:1070px){
     .inicio{
-        font-size: 30px;
+        font-size: 28px;
     }
     .caja{
         width: 350px;
@@ -267,14 +279,41 @@ footer h5{
     .imgnosotros{
         width: 280px;
     }
-
+    .checkbtn{
+        display: block;
+        margin-right: 20px;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(0, 0, 0);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
     .navegador{
         display: flex;
-        justify-content: center;
+        align-items: space-around;
     }
-    
-    .logo img{
-        display: none;
+    .navegador ul{
+        display:block;
+    }
+    .navegador ul li{
+        text-align: center;
+        display: block;
+        margin: 15px 0;
+        justify-content: space-between;
+    }
+    .navegador ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left: 0;
     }
 }
 
@@ -284,16 +323,6 @@ footer h5{
     }
     .navegador{
         height: 60px;
-    }
-        
-    .navegador ul li{
-        line-height: 60px;
-        margin: 0 5px;
-    }
-    
-    .navegador ul li a{
-        font-size: 15px;
-        padding: 10px;
     }
           
     footer h5{
@@ -343,10 +372,6 @@ footer h5{
    .inicio{
         display: flex;
         justify-content:flex-start;
-    }
-   .navegador ul li a{
-        font-size: 12px;
-        padding: 6px;
     }
     .form{
         width: 400px;
