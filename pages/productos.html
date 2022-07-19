@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <div class="contenedorGeneral">
@@ -31,53 +33,63 @@
             </nav>
         </header>
         <main class="principal">
-            <div class="contenedorTarjProductos">
-                <h3>QUESOS</h3>
-                <div class="productos">
-                    <img src="../assets/img/cabra.jpg" alt="">
-                    <h5>Queso de cabra</h5>    
+            <h2 class="tituloProductos" >QUESOS</h2>
+            <div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="false">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
-                <div class="productos">
-                    <img src="../assets/img/colonia.jpg" alt="">
-                    <h5>Queso colonia</h5>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../assets/img/cabra.jpg" class="d-block w-100 imgProductos" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Queso de cabra</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/img/colonia.jpg" class="d-block w-100 imgProductos" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Queso colonia</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/img/gorgonzola.jpg" class="d-block w-100 imgProductos" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Queso gorgonzola</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/img/mozzarella.jpg" class="d-block w-100 imgProductos" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Mozzarella</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/img/parmesano.jpg" class="d-block w-100 imgProductos" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Queso parmesano</h5>
+                    </div>
+                  </div>
                 </div>
-                <div class="productos">
-                    <img src="../assets/img/gorgonzola.jpg" alt="">
-                    <h5>Gorgonzola</h5>
-                <div class="productos">
-                    <img src="../assets/img/mozzarella.jpg" alt="">
-                    <h5>Mozzarella</h5>
-                </div>    
-                <div class="productos">
-                    <img src="../assets/img/parmesano.jpg" alt="">
-                    <h5>Parmesano</h5>
-                </div>
-                <div class="productos">
-                    <img src="../assets/img/sbrinz.jpg" alt="">
-                    <h5>Sbrinz</h5>
-                </div>
-                <div class="productos">
-                    <img src="../assets/img/scamorza.jpg" alt="">
-                    <h5>Scamorza</h5>
-                </div> 
-                <h3>PRODUCTOS ARTESANALES</h3>
-                <div class="productos">
-                    <img src="../assets/img/conservas.webp" alt="">
-                    <h5>Conservas</h5>
-                </div>
-                <div class="productos">
-                    <img src="../assets/img/embutidos.webp" alt="">
-                    <h5>Embutidos</h5>
-                </div>
-                <div class="productos">
-                    <img src="../assets/img/vino.jpg" alt="">
-                    <h5>Vinos</h5>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
             </div>
+            <h2 class="tituloProductos" >PRODUCTOS ARTESANALES</h2>
         </main>
         <footer class="footer">
             <h5>MartinFierro, todos los derechos reservados</h5>
         </footer>
     </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
