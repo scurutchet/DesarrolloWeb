@@ -39,7 +39,7 @@ body{
     width: 100%;
     height: 80px;
     background-color: rgb(0, 0, 0);
-    position: fixed;
+    position: absolute;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -156,43 +156,15 @@ li a.active, li a:hover{
 
 /*Página Nosotros*/
 
-.contenedorCajas{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: center;
-    align-content:center;
-    flex-wrap: wrap;
-}
-
-.caja{
+.video{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 440px;
-    min-height: 405px;
-    background-color: rgba(23, 21, 15, 0.92);
-    padding: 10px;
-    border-radius: 5px;
-    margin: 20px;  
-    transition: 1s;  
 }
-.caja:hover{
-    transform: scale(1.05);
-}
-.caja p{
-    line-height: 30px;
-    text-align: justify;
-    font-size: 20px;
-    color: rgba(249, 194, 76, 0.92);
-    padding: 5px;
-}
-
-.imgnosotros{
-    width: 380px;
-    border-radius: 7px;
-    padding: 5px;
+.video h2{
+    color: whitesmoke;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
 /*Página ubicación*/
@@ -221,21 +193,17 @@ li a.active, li a:hover{
     height: 500px;
     overflow: hidden;
 }
-
 .itemCarousel{
     height: 100%;
     position: relative;
 }
-
 .itemCarousel img{
     width: 100%;
     height: 100%;
 }
-
 .tarjetaCarousel{
     height: 100%;
 }
-
 .flechaCarousel{
     height: 100%;
     position: absolute;
@@ -246,11 +214,66 @@ li a.active, li a:hover{
     justify-content: space-between;
     padding: 20px;
 }
-
 i{
     font-style: none;
     color: white;
     font-size: 35px;
+}
+
+.conTarjetas{
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.conTarjetasAnimadas{
+    margin: 20px;
+}
+.conTarjetasAnimadas a{
+    display: inline-block;
+}
+.conTarjetasAnimadas:hover figure{
+    transform: perspective(600px) rotateY(180deg);
+}
+.conTarjetasAnimadas:hover figure img{
+    filter: blur(2px);
+}
+figure{
+    width: 300px;
+    height: 350px;
+    margin: 0;
+    position: relative;
+    transition: all ease 0.5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+}
+figure .frontal, figure .trasera{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+figure .frontal{
+    display: block;
+}
+figure .trasera{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    color: whitesmoke;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    overflow: auto;
+}
+figure .trasera h2{
+    margin-bottom: 10px;
+}
+figure .trasera p{
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 30px;
 }
 
 /*Página contacto*/
@@ -262,8 +285,11 @@ i{
 .input{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
+    align-items:center;
+    align-content:center;
+    justify-content: space-around;
+    margin-bottom: 70px;
+
 }
 
 .form{
@@ -278,7 +304,7 @@ i{
 .textoForm{
     display: block;
     width: 500px;
-    margin: 20px;
+    margin: 0 20px;
     padding: 10px;
     background-color: rgba(23, 21, 15, 0.92);
     border-radius: 5px;
@@ -287,7 +313,7 @@ i{
 .btnForm{
     display: block;
     width: 500px;
-    margin: 20px;
+    margin: 0 20px;
     padding: 10px;
     border-radius: 5px;
     background-color: rgba(120, 98, 34, 0.92);
