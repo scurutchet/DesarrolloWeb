@@ -166,6 +166,42 @@ li a.active, li a:hover{
     justify-content: center;
     text-align: center;
 }
+.conTarjetasAnimadasNosotros{
+    margin: 30px;
+}
+.conTarjetasAnimadasNosotros a{
+    display: inline-block;
+}
+.conTarjetasAnimadasNosotros:hover figure{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.conTarjetasAnimadasNosotros figure{
+    width: 400px;
+    height: 350px;
+    margin: 0;
+    position: relative;
+    transition: all ease 0.5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+}
+.conTarjetasAnimadasNosotros figure .trasera{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    color: whitesmoke;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    overflow: auto;
+    background: rgba(111,114,101,0.75);
+    background: -moz-linear-gradient(top, rgba(111,114,101,0.75) 0%, rgba(158,158,158,0.75) 0%, rgba(24,16,18,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(111,114,101,0.75)), color-stop(0%, rgba(158,158,158,0.75)), color-stop(100%, rgba(24,16,18,1)));
+    background: -webkit-linear-gradient(top, rgba(111,114,101,0.75) 0%, rgba(158,158,158,0.75) 0%, rgba(24,16,18,1) 100%);
+    background: -o-linear-gradient(top, rgba(111,114,101,0.75) 0%, rgba(158,158,158,0.75) 0%, rgba(24,16,18,1) 100%);
+    background: -ms-linear-gradient(top, rgba(111,114,101,0.75) 0%, rgba(158,158,158,0.75) 0%, rgba(24,16,18,1) 100%);
+    background: linear-gradient(to bottom, rgba(111,114,101,0.75) 0%, rgba(158,158,158,0.75) 0%, rgba(24,16,18,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f7265', endColorstr='#181012', GradientType=0 );
+}
 
 /*Página ubicación*/
 
