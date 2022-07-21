@@ -88,15 +88,74 @@ li a.active, li a:hover{
 }
 
 .footer{
-    width: 100%;
-    height: 60px;
+    position: relative;
+    bottom: 0;
     background-color: rgb(0, 0, 0);
-    position: absolute;
-    bottom:0;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    align-content: space-around;
+    width: 100%;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: rgba(249, 194, 76, 0.92);
+    display: flex;    
+}
+.footerLeft{
+    width: 30%;
+    margin-bottom: 15px;
+}
+.footerLinks a{
+    display: inline-block;
+    line-height: 40px;
+    color: rgba(249, 194, 76, 0.92);
+    text-decoration: none;
+    padding: 0 3px 0 3px;
+}
+.footerCenter{
+    width: 30%;
+    height: 38px;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+.footerCenter i{
+    font-size: 17px;
+    line-height: 38px;
+}
+.p{
+    display:block;
+    color: antiquewhite;
+    font-size: 14px;
+    justify-content: center;
+}
+.footerRight{
+    width: 30%;
+}
+.footerIcons{
+    margin-top: 25px;
+}
+.footerIcons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: rgba(23, 21, 15, 0.92);
+    border-radius: 2px;
+    font-size: 20px;
+    color: rgba(249, 194, 76, 0.92);
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+.footerIcons a:hover{
+    background-color: rgba(249, 194, 76, 0.92);
+    color: rgba(23, 21, 15, 0.92);
+}
+.footerLinks a:hover{
+    color: rgba(23, 21, 15, 0.92);
+}
+.logo{
+    width: 75px;
 }
 
 .social{
@@ -141,7 +200,7 @@ li a.active, li a:hover{
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
-    height: calc(100vh - 80px);
+    height: 100vh;
     animation-name: aparecer;
     animation-duration: 2s;
 }
@@ -316,44 +375,82 @@ figure .trasera p{
 
 .contacto{
     background-image: url(../img/fondo.jpg);
+    background-repeat:no-repeat ;
+    width: 100%;
+    height: 100vh;
 }
-
-.input{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    align-content:center;
-    justify-content: space-around;
-    margin-bottom: 70px;
-
+.conForm{
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
-
-.form{
-    display: block;
-    width: 500px;
-    margin: 20px;
-    padding: 10px;
-    background-color: rgba(23, 21, 15, 0.92);
-    border-radius: 5px;
+.formInner{
+    padding: 30px;
 }
-
-.textoForm{
-    display: block;
-    width: 500px;
-    margin: 0 20px;
-    padding: 10px;
-    background-color: rgba(23, 21, 15, 0.92);
-    border-radius: 5px;
-}
-
-.btnForm{
-    display: block;
-    width: 500px;
-    margin: 0 20px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgba(120, 98, 34, 0.92);
+.conForm h2{
     font-weight:bold;
+    padding: 20px;
+    color: black;
+    text-align: center;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.inputHolder{
+    position: relative;
+    margin-bottom: 25px;
+}
+.inputText, textarea{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    color: black;
+}
+textarea{
+    min-height: 150px;
+    padding: 15px 0;
+}
+.label{
+    position: absolute;
+    pointer-events: none;
+    transition: 0.5s ease all;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-left: -90%;
+    padding-top: 15px;
+}
+button{
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    color: black;
+    transition: 0.5s ease all;
+}
+button:hover{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+}
+botton:focus{
+    outline: 0;
+}
+input:focus, textarea:focus{
+    outline: 0;
+    border-bottom: 2px solid black;
+}
+input:focus ~ .label, 
+textarea:focus ~ .label, 
+input:not(:focus):valid ~ .label,
+textarea:not(:focus):valid ~ .label {
+    top: -20px;
+    left: 100%;
+    font-size: 11px;
 }
 
 /*Responsive*/
