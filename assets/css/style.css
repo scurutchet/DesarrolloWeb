@@ -194,7 +194,7 @@ li a.active, li a:hover{
     text-align:center;
     font-size: 40px;
     line-height: 170px;
-    background-image: url(../img/inicio.jpg);
+    background-image: url(../imgOptimizadas/inicio.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -268,7 +268,7 @@ li a.active, li a:hover{
     align-items: center;
     justify-content: center;
     line-height: 50px;
-    background-image: url(../img/carmelo.jpg);
+    background-image: url(../imgOptimizadas/carmelo.jpg);
 }
 .mapa iframe{
     margin-top: 100px;
@@ -372,7 +372,7 @@ figure .trasera p{
 /*Página contacto*/
 
 .contacto{
-    background-image: url(../img/fondo.jpg);
+    background-image: url(../imgOptimizadas/fondo.jpg);
     background-size: cover;
     background-repeat:no-repeat ;
     width: 100%;
@@ -547,7 +547,7 @@ textarea:not(:focus):valid ~ .label {
 @media(max-width:530px){
     .inicio{
         font-size: 15px;
-        background-image: url(../img/inicioResponsive.jpg);
+        background-image: url(../imgOptimizadas/inicioResponsive.jpg);
     }
     .conTarjetasAnimadasNosotros figure{
         width: 300px;
