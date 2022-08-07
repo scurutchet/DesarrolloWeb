@@ -115,6 +115,10 @@ li a.active, li a:hover {
   line-height: 50px;
   margin-bottom: 30px;
 }
+.footer .footerCenter a {
+  text-decoration: none;
+  color: rgba(249, 194, 76, 0.92);
+}
 .footer .footerCenter i {
   font-size: 17px;
   line-height: 38px;
